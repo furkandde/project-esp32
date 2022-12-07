@@ -30,7 +30,7 @@ void IRAM_ATTR Timer() {  // timer interrupt
     timer_cnt = 0;
   }
 }
-void IRAM_ATTR Button() {
+void IRAM_ATTR Button() { //button interrupt
 
 
 
@@ -104,7 +104,7 @@ void setup() {
   Serial.println("Enter 'start' or 'stop' for echo task; 'ledon=xxx' or 'ledoff=xxx' for adj led on-off time");
 
 }
-void loop() {
+void loop() { //main
   if (Serial.available() > 0) {
 
     str = Serial.readString();
