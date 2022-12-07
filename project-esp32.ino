@@ -4,8 +4,8 @@
 #define BUTTON 27
 hw_timer_t *My_timer = NULL;
 unsigned int timer_cnt = 0;      // for time counting
-unsigned int led_onTime = 1000;  // default time 1000ms=1s
-unsigned int led_offTime = 1000;
+unsigned int led_onTime = 1000;   // default time 1000ms=1s
+unsigned int led_offTime = 1000;   // default time 1000ms=1s
 unsigned int adj_led_onTime = 1000;
 unsigned int adj_led_offTime = 1000;
 String str;
@@ -15,7 +15,7 @@ unsigned int baud_rate[4] = { 9600, 19200, 38400, 115200 };
 unsigned int baud_cnt = 0;
 unsigned long lastDebounceTime = 0; // for the button
 
-void IRAM_ATTR Timer() {  // timer interrupt
+void IRAM_ATTR Timer() {  // timer interrupt every 100ms
 
   timer_cnt++;
 
